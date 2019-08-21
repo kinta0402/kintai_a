@@ -9,13 +9,18 @@
         <%= link_to "→", user_path(params: {id: @user.id, first_day: @first_day.next_month }),
                          class: "btn btn-xs btn-primary" %>
       </td>
-      <td>指定勤務時間　<%= format_basic_time(@user.work_time) %></td>
+      <td>
+        指定勤務時間　<%= format_basic_time(@user.work_time) %></br>
+        指定勤務終了時間      
+      </td>
       <td>基本時間　<%= format_basic_time(@user.basic_time) %></td>
       <td>初日　<%= @first_day.to_s(:date) %></td>
     </tr>
     <tr>
       <td>所属：<%= @user.department.present? ? @user.department : "未設定" %></td>
       <td>氏名：<%= @user.name %></td>
+      <td>コード</td>
+      <td></td>
       <td>出勤日数：<%= @worked_sum %>日</td>
       <td>締日　<%= @last_day.to_s(:date) %></td>
     </tr>
