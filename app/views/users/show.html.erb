@@ -124,7 +124,16 @@
         <td colspan = "3"></td>
         <td>
           所属長承認<br>
+          <div class="dropdown">
+            <button type="button" class="btn btn-default dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+             <span class="caret"></span>
+            </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><a href="#">上長1</a></li>
+                <li><a href="#">上長2</a></li>
+              </ul>
           <%= link_to "申請", root_path, class: "btn btn-primary" %>
+          </div>
         </td>
       </tr>
     </tfoot>
