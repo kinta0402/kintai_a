@@ -13,7 +13,7 @@
         指定勤務時間　<%= format_basic_time(@user.work_time) %></br>
         指定勤務終了時間      
       </td>
-      <td>基本時間　<%= format_basic_time(@user.basic_time) %></td>
+      <td colspan = "3">基本時間　<%= format_basic_time(@user.basic_time) %></td>
       <td>初日　<%= @first_day.to_s(:date) %></td>
     </tr>
     <tr>
@@ -42,8 +42,8 @@
         <th rowspan = "3">残業申請</th>
         <th rowspan = "3">日付</th>
         <th rowspan = "3">曜日</th>
-        <th colspan = "8">実績</th>
-        <th colspan = "8">実績</th>
+        <th colspan = "8">【実績】</th>
+        <th colspan = "8">所定外勤務</th>
       </tr>
       <tr>
         <th colspan = "3">出社</th>
@@ -104,15 +104,28 @@
             <% end %>
           </td>
           <td><%= day.note %></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
         </tr>
       <% end %>
     </tbody>
     <tfoot>
       <tr>
+        <td></td>
         <td colspan = "2"><%= format_basic_time(@user.basic_time).to_f * @worked_sum %></td>
         <td colspan = "6"></td>
         <td><%= working_times_sum(@total_seconds) unless @total_seconds.nil? %></td>
         <td></td>
+        <td colspan = "2"></td>
+        <td colspan = "3"></td>
+        <td>
+          所属長承認<br>
+          <%= link_to "申請", root_path, class: "btn btn-primary" %>
+        </td>
       </tr>
     </tfoot>
   </table>
