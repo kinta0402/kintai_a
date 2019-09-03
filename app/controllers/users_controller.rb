@@ -80,6 +80,9 @@ class UsersController < ApplicationController
     end
   end
   
+  def base_edit
+  end
+  
   
   private
   

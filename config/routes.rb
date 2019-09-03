@@ -11,4 +11,6 @@ Rails.application.routes.draw do
   resources :users do
     resources :attendances, only: :create
   end
+  
+  get '/base_edit', to: 'users#base_edit'
 end
