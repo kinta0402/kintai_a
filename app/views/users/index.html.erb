@@ -6,6 +6,24 @@
   <h1>ユーザ一覧</h1>
 <% end %>
 
+<!--  CSVファイル選択ボタン  -->
+<div class="input-group">
+    <label class="input-group-btn">
+        <span class="btn btn-default">
+            ファイル選択<input type="file" style="display:none">
+        </span>
+    </label>
+    <input type="text" class="form-control" readonly="">
+</div>
+
+
+<!--CSVインポートボタン -->
+
+<div class = "btn-padding">  
+  <%= link_to "CSVをインポート", root_path, class: "btn btn-primary" %>
+</div>
+
+
 <!--  検索拡張機能  -->
 <div class="search">
   <p>ユーザー名検索</p>

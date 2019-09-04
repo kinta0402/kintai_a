@@ -13,4 +13,6 @@ Rails.application.routes.draw do
   end
   
   get '/base_edit', to: 'users#base_edit'
+  get '/basic_infomation', to: 'users#basic_infomation'
+  get '/working_users', to: 'users#working_users'
 end

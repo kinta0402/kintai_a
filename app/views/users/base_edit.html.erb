@@ -1,3 +1,36 @@
 <% provide(:title, "拠点情報修正") %>
 
 <h1>拠点一覧</h1>
+
+<div>
+  <table class = "table-bordered  table-striped table-condensed">
+    <tr>
+      <td></td>
+      <td></td>
+      <td>拠点番号</td>
+      <td>拠点名前</td>
+      <td>勤怠種類</td>
+    </tr>
+    <tr>
+      <td>
+        <%= link_to "編集", root_path, class: "btn btn-primary" %>
+      </td>
+      <td>
+        <%= link_to "削除", root_path, class: "btn btn-primary" %>
+      </td>
+      <td>
+        10
+      </td>
+      <td>
+        拠点F
+      </td>
+      <td>
+        出勤
+      </td>
+    </tr>
+  </table>
+</div>
+
+<div class = "btn-padding">  <!--class = "col-mt-6"> 多分bootstrap 3 だから、この記載方法で余白を追加する！！--> 
+  <%= link_to "拠点情報の追加", root_path, class: "btn btn-primary" %>
+</div>

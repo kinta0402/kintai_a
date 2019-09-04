@@ -83,6 +83,11 @@ class UsersController < ApplicationController
   def base_edit
   end
   
+  def basic_infomation
+  end
+  
+  def working_users
+  end
   
   private
   
