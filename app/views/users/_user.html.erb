@@ -9,7 +9,34 @@
     <table class = "table-bordered  table-striped table-condensed">
       <tr>
         <td>
-          <%= link_to "編集", basic_info_path(user), class: "btn btn-primary btn-lg pull-left" %> <!--<次はアコーディオン作成>-->
+            <ul>
+    <table class = "table-bordered  table-striped table-condensed">
+      <tr>
+        
+          <button type="button" class="btn btn-primary btn-lg pull-left" data-toggle="collapse" data-target="#demo">click me</button>
+            <div id="demo" class="collapse">
+            <%= form_with model: @user, id: :user_id, local: true do |f| %>
+              <%= f.label :name, "名前" %>
+              <%= f.text_field :name, class: 'form-control' %>
+                    
+              <%= f.label :email, "メールアドレス" %>
+              <%= f.email_field :email, class: 'form-control' %>
+                  
+              <%= f.label :department, "所属" %>
+              <%= f.text_field :department, class: 'form-control' %>
+                    
+              <%= f.label :password, "パスワード" %>
+              <%= f.password_field :password, class: 'form-control' %>
+                    
+              <%= f.label :password_confirmation, "パスワード確認" %>
+              <%= f.password_field :password_confirmation, class: 'form-control' %>
+                    
+            <% end %>  
+            </div>
+      
+      </tr>
+    </table>  
+  </ul>
         </td>
       </tr>
     </table>  
