@@ -31,8 +31,8 @@ ActiveRecord::Schema.define(version: 20190823030420) do
     t.string "password_digest"
     t.string "department"
     t.boolean "admin", default: false
-    t.datetime "basic_time", default: "2019-02-19 22:30:00" #基本時間
-    t.datetime "work_time", default: "2019-02-19 23:00:00"
+    t.datetime "basic_time", default: "2019-02-19 22:30:00" #指定勤務時間
+    t.datetime "work_time", default: "2019-02-19 23:00:00" #基本勤務時間
     t.string "remember_digest"
     t.boolean "superior", default: false
     t.index ["email"], name: "index_users_on_email", unique: true

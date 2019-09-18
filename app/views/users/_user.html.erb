@@ -28,14 +28,16 @@
             <%= f.label :password, "パスワード" %>
             <%= f.password_field :password, class: 'form-control' %>
             
-            <%= f.label :basic_time, "基本時間" %>
+            <%= f.label :basic_time, "指定勤務時間" %>
             <%= f.time_field :basic_time, class: 'form-control' %>
             
-            <%= f.label :work_time, "指定勤務時間" %>
+            <%= f.label :work_time, "基本勤務時間" %>
             <%= f.time_field :work_time, class: 'form-control' %>
             
             <%= f.label :work_time, "指定勤務終了時間" %>
             <%= f.time_field :work_time, class: 'form-control' %>
+            
+            <%= f.submit "編集", class: "btn btn-primary" %><%= f.submit "閉じる", class: "btn btn-primary" %>
                   
                       
            <% end %>  
